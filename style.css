@@ -133,13 +133,8 @@ h1 {
 }
 
 .offres_card div:hover {
-    background-color: var(--red);
-    color: white;
+    background-color: var(--gray);
     transform: translateY(-10px);
-}
-
-.offres_card div:hover .offres_card div h3 {
-    color: white !important;
 }
 
 .offres_card div h3 {
