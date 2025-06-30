@@ -24,7 +24,7 @@ html, body {
 
 header {
     width: 100%;
-    padding: 10px;
+    padding: 10px 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -36,6 +36,16 @@ header img {
     border-radius: 50%;
     box-shadow: 1px 1px 2px gray;
 }
+
+nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
+}
+
+
 
 nav ul {
     display: flex;
@@ -54,17 +64,6 @@ nav ul li a:hover {
     color: var(--red);
 }
 
-#cta {
-    display: block; 
-    background-color: var(--red);
-    color: white;
-    padding: 10px;
-    border-radius: 6px;
-    width: 20%;
-    text-align: center;
-    transition: background-color .4s ease-in;
-}
-
 #cta:hover {
     background-color: #cc103f;
 
@@ -76,11 +75,14 @@ a {
 
 section {
     padding: 40px;
+    min-height: 80vh;
+    display: grid;
+    place-items: center;
 }
 
 .banniere {
     background-image: url("images/banniere-netflix.jpeg");
-    min-height: 70vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,14 +98,23 @@ h1 {
     text-align: center;
 }
 
+.offres {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 .offres hr {
-    width: 30%;
+    width: 20%;
     border: 3px solid var(--red);
     display: block;
     margin: 10px auto;
 }
 
 .offres_card {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -118,6 +129,17 @@ h1 {
     text-align: center;
     font-family: var(--titre);
     flex: 1;
+    transition: all .4s ease;
+}
+
+.offres_card div:hover {
+    background-color: var(--red);
+    color: white;
+    transform: translateY(-10px);
+}
+
+.offres_card div:hover .offres_card div h3 {
+    color: white !important;
 }
 
 .offres_card div h3 {
@@ -164,12 +186,20 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 30px;
+    margin-top: 30px;
 }
 
 .avis_card > div {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    transition: background-color .4s ease;
+    padding: 20px;
+}
+
+.avis_card > div:hover {
+    background-color: var(--light-gray);
 }
 
 .avis_card div img {
@@ -247,7 +277,7 @@ label {
     font-weight: 900;
 }
 
-button[type="submit"] {
+button[type="submit"], nav > a, .banniere a {
     display: block; 
     background-color: var(--red);
     color: white;
@@ -319,13 +349,21 @@ footer img {
 }
 
 @media all and (max-width: 400px) {
-    nav {
+    nav ul {
         display: none;
     }
 
+    nav > a {
+        width: 80%;
+    }
+
     .offres_card {
-        flex-wrap: wrap;
+        flex-direction: column;
         gap: 20px;
+    } 
+
+    form {
+        width: 100%;
     }
 
     .banniere {
@@ -338,11 +376,29 @@ footer img {
 }
 
 @media all and (max-width: 600px) {
-    #cta {
-        width: 50%;
-    }
-    nav {
+    nav ul {
         display: none;
+    }
+
+    nav > a {
+        width: 80%;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .offres_card {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .offres_card div {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column-reverse;
     }
 }
 
@@ -356,5 +412,9 @@ footer img {
         flex-direction: row;
         justify-content: space-around;
         margin: 50px 0;
+    }
+
+    button[type="submit"], nav > a, .banniere a {
+        width: 15%;
     }
 }
