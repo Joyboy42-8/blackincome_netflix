@@ -62,22 +62,22 @@
 
     <section class="banniere">
         <h1 id="first">Accéder à Netflix Sans Limites !</h1>
-        <a href="#commander" id="cta">Commander</a>
+        <a href="#commander" id="cta" class="cta">Commander</a>
     </section>
 
     <section class="offres" id="offres">
-        <h1>Nos Offres</h1>
-        <hr>
+        <h1 class="scroll">Nos Offres</h1>
+        <hr class="scroll">
         <div class="offres_card">
-            <div>
+            <div class="scroll">
                 <h3>1 MOIS</h3>
                 <p>2500 F</p>
             </div>
-            <div>
+            <div class="scroll">
                 <h3>3 MOIS</h3>
                 <p>6000 F</p>
             </div>
-            <div>
+            <div class="scroll">
                 <h3>9 MOIS</h3>
                 <p>20000 F</p>
             </div>
@@ -85,17 +85,17 @@
     </section>
 
     <section class="avantages" id="avantages">
-        <h1>Les Avantages de Nos Offres</h1>
+        <h1 class="scroll">Les Avantages de Nos Offres</h1>
         <ul class="avantages_list">
-            <li class="avantages_list-item">
+            <li class="avantages_list-item scroll">
                 <p>Prix Imbattables</p>
                 <p>Profitez d'un accès Netflix à moindre coût, sans engagement.</p>
             </li>
-            <li class="avantages_list-item">
+            <li class="avantages_list-item scroll">
                 <p>Activation Rapide</p>
                 <p>Recevez vos identifiants en moins de 24h après commande.</p>
             </li>
-            <li class="avantages_list-item">
+            <li class="avantages_list-item scroll">
                 <p>Assistance Dédiée</p>
                 <p>Un support réactif pour vous accompagner à chaque étape.</p>
             </li>
@@ -103,9 +103,9 @@
     </section>
 
     <section class="avis" id="avis">
-        <h1>Ce Que Disent Nos Clients</h1>
+        <h1 class="scroll">Ce Que Disent Nos Clients</h1>
         <div class="avis_card">
-            <div>
+            <div class="scroll">
                 <img src="images/p4.PNG" alt="image_client1">
                 <h5>Seynabou</h5>
                 <i>Black Income offre une service de qualité!</i>
@@ -117,7 +117,7 @@
                     <span class="fa-solid fa-star"></span>
                 </div>
             </div>
-            <div>
+            <div class="scroll">
                 <img src="images/p5.PNG" alt="image_client2">
                 <h5>Bini</h5>
                 <i>Service rapide et de qualité</i>
@@ -129,7 +129,7 @@
                     <span class="fa-solid fa-star"></span>
                 </div>
             </div>
-            <div>
+            <div class="scroll">
                 <img src="images/p2.PNG" alt="image_client3">
                 <h5>Omar</h5>
                 <i>Grace à vous, je m'ennuie plus !</i>
@@ -142,21 +142,21 @@
                 </div>
             </div>
         </div>
-        <i>Avec Black Income, tout le monde est satisfait !</i>
+        <i class="scroll">Avec Black Income, tout le monde est satisfait !</i>
     </section>
 
     <section class="fonctionnement">
-        <h1>Comment ça Marche ?</h1>
-        <p>Choisir un offre</p>
-        <span class="fa-solid fa-arrow-down"></span>
-        <p>Payer</p>
-        <span class="fa-solid fa-arrow-down"></span>
-        <p>Recevoir accès</p>
+        <h1 class="scroll">Comment ça Marche ?</h1>
+        <p class="scroll">Choisir un offre</p>
+        <span class="fa-solid fa-arrow-down scroll"></span>
+        <p class="scroll">Payer</p>
+        <span class="fa-solid fa-arrow-down scroll"></span>
+        <p class="scroll">Recevoir accès</p>
     </section>
 
     <section class="commander" id="commander">
-        <h1>Commandez votre compte</h1>
-        <form action="">
+        <h1 class="scroll">Commandez votre compte</h1>
+        <form action="" class="scroll">
             <div>
                 <label for="prenom">Prénom & Nom</label>
                 <input type="text" id="prenom" placeholder="Entrez votre prénom" required>
@@ -202,6 +202,10 @@
             </ul>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
